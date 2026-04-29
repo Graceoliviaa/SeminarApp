@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_flower_dark">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomNav"
+        android:paddingBottom="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="20dp"
+                android:paddingBottom="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Form Pendaftaran Seminar"
+                    android:textSize="22sp"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="@font/poppins_bold"
+                    android:layout_marginBottom="4dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Isi data diri dengan lengkap dan benar"
+                    android:textSize="12sp"
+                    android:textColor="#8FA8C0"
+                    android:fontFamily="@font/poppins_regular"/>
+
+                <View
+                    android:layout_width="36dp"
+                    android:layout_height="2dp"
+                    android:background="#C9A84C"
+                    android:layout_marginTop="8dp"/>
+            </LinearLayout>
+
+            <!-- Form Card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card_glass_dark"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Nama Lengkap" android:textColor="#C9A84C"
+                    android:textSize="13sp" android:fontFamily="@font/poppins_semibold"
+                    android:layout_marginBottom="6dp"/>
+                <EditText android:id="@+id/etNama" android:layout_width="match_parent"
+                    android:layout_height="50dp" android:hint="Masukkan nama lengkap"
+                    android:background="@drawable/input_dark" android:padding="14dp"
+                    android:textColor="#FFFFFF" android:textColorHint="#5A7A95"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textSize="14sp" android:layout_marginBottom="16dp"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Email" android:textColor="#C9A84C"
+                    android:textSize="13sp" android:fontFamily="@font/poppins_semibold"
+                    android:layout_marginBottom="6dp"/>
+                <EditText android:id="@+id/etEmailForm" android:layout_width="match_parent"
+                    android:layout_height="50dp" android:hint="contoh@gmail.com"
+                    android:inputType="textEmailAddress"
+                    android:background="@drawable/input_dark" android:padding="14dp"
+                    android:textColor="#FFFFFF" android:textColorHint="#5A7A95"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textSize="14sp" android:layout_marginBottom="4dp"/>
+                <TextView android:id="@+id/tvEmailFormError" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="⚠ Email harus menggunakan @gmail.com"
+                    android:textSize="11sp" android:textColor="#FF6B6B"
+                    android:fontFamily="@font/poppins_regular"
+                    android:visibility="gone" android:layout_marginBottom="12dp"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Nomor HP (maks. 12 digit)" android:textColor="#C9A84C"
+                    android:textSize="13sp" android:fontFamily="@font/poppins_semibold"
+                    android:layout_marginBottom="6dp"/>
+                <EditText android:id="@+id/etPhone" android:layout_width="match_parent"
+                    android:layout_height="50dp" android:hint="Contoh: 081234567890"
+                    android:inputType="phone" android:maxLength="12"
+                    android:background="@drawable/input_dark" android:padding="14dp"
+                    android:textColor="#FFFFFF" android:textColorHint="#5A7A95"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textSize="14sp" android:layout_marginBottom="16dp"/>
+                <TextView
+                    android:id="@+id/tvPhoneError"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="⚠ Nomor HP harus diawali 08, maks. 12 digit"
+                    android:textSize="11sp"
+                    android:textColor="#FF6B6B"
+                    android:fontFamily="@font/poppins_regular"
+                    android:visibility="gone"
+                    android:layout_marginBottom="12dp"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Jenis Kelamin" android:textColor="#C9A84C"
+                    android:textSize="13sp" android:fontFamily="@font/poppins_semibold"
+                    android:layout_marginBottom="6dp"/>
+                <RadioGroup android:id="@+id/rgGender" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:orientation="horizontal"
+                    android:layout_marginBottom="16dp">
+                    <RadioButton android:id="@+id/rbLaki" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:text="Laki-laki"
+                        android:textColor="#FFFFFF" android:layout_marginEnd="20dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:buttonTint="#C9A84C"/>
+                    <RadioButton android:id="@+id/rbPerempuan" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:text="Perempuan"
+                        android:textColor="#FFFFFF"
+                        android:fontFamily="@font/poppins_regular"
+                        android:buttonTint="#C9A84C"/>
+                </RadioGroup>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Pilih Seminar" android:textColor="#C9A84C"
+                    android:textSize="13sp" android:fontFamily="@font/poppins_semibold"
+                    android:layout_marginBottom="6dp"/>
+                <Spinner android:id="@+id/spinnerSeminar" android:layout_width="match_parent"
+                    android:layout_height="50dp" android:background="@drawable/input_dark"
+                    android:padding="8dp" android:layout_marginBottom="16dp"/>
+
+                <CheckBox android:id="@+id/cbSetuju" android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Saya menyetujui syarat dan ketentuan yang berlaku"
+                    android:textColor="#FFFFFF" android:textSize="13sp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:buttonTint="#C9A84C"
+                    android:layout_marginBottom="24dp"/>
+
+                <Button android:id="@+id/btnSubmit" android:layout_width="match_parent"
+                    android:layout_height="52dp" android:text="SUBMIT PENDAFTARAN"
+                    android:textColor="#0A1628"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textSize="14sp" android:background="@drawable/button_background"/>
+
+            </LinearLayout>
+
+            <View android:layout_width="0dp" android:layout_height="24dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        android:id="@+id/bottomNav"
+        layout="@layout/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

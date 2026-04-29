@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_flower_light">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomNav"
+        android:paddingBottom="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="28dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Halo,"
+                android:textSize="14sp"
+                android:textColor="#1A3A5C"
+                android:fontFamily="@font/poppins_regular"
+                android:layout_marginTop="40dp"/>
+
+            <TextView
+                android:id="@+id/tvNamaUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="admin"
+                android:textSize="20sp"
+                android:textColor="#0A1628"
+                android:fontFamily="@font/poppins_regular"
+                android:layout_marginBottom="4dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Selamat Datang 👋"
+                android:textSize="26sp"
+                android:textColor="#0A1628"
+                android:fontFamily="@font/poppins_bold"
+                android:layout_marginBottom="4dp"/>
+
+            <View
+                android:layout_width="36dp"
+                android:layout_height="2dp"
+                android:background="#C9A84C"
+                android:layout_marginBottom="32dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card_glass_light"
+                android:orientation="vertical"
+                android:padding="24dp"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="✦  Seminar Tersedia"
+                    android:textSize="16sp"
+                    android:textColor="#0A1628"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:layout_marginBottom="12dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="• AI Seminar\n• Mobile Development\n• Cyber Security\n• Data Science\n• UI/UX Design"
+                    android:textSize="14sp"
+                    android:textColor="#1A3A5C"
+                    android:fontFamily="@font/poppins_regular"
+                    android:lineSpacingExtra="6dp"
+                    android:layout_marginBottom="20dp"/>
+
+                <Button
+                    android:id="@+id/btnDaftar"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:text="DAFTAR SEKARANG"
+                    android:textColor="#0A1628"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textSize="14sp"
+                    android:background="@drawable/button_background"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        android:id="@+id/bottomNav"
+        layout="@layout/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

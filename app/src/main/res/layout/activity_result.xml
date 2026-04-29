@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_flower_light">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomNav"
+        android:paddingBottom="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="28dp">
+
+            <TextView
+                android:id="@+id/tvResultStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="✦"
+                android:textSize="40sp"
+                android:textColor="#C9A84C"
+                android:fontFamily="@font/poppins_regular"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:id="@+id/tvResultTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pendaftaran Berhasil!"
+                android:textSize="22sp"
+                android:textColor="#0A1628"
+                android:fontFamily="@font/poppins_bold"
+                android:layout_marginBottom="4dp"/>
+
+            <View
+                android:layout_width="36dp"
+                android:layout_height="2dp"
+                android:background="#C9A84C"
+                android:layout_marginBottom="28dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card_glass_light"
+                android:orientation="vertical"
+                android:padding="24dp"
+                android:layout_marginBottom="20dp">
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Detail Pendaftaran" android:textSize="16sp"
+                    android:textColor="#0A1628"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:layout_marginBottom="20dp"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="NAMA" android:textSize="10sp" android:letterSpacing="0.1"
+                    android:textColor="#C9A84C" android:fontFamily="@font/poppins_semibold"/>
+                <TextView android:id="@+id/tvNamaResult" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="-"
+                    android:textColor="#0A1628" android:textSize="15sp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:layout_marginBottom="16dp"/>
+
+                <View android:layout_width="match_parent" android:layout_height="0.5dp"
+                    android:background="#1A3A5C" android:alpha="0.2"
+                    android:layout_marginBottom="16dp"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="EMAIL" android:textSize="10sp" android:letterSpacing="0.1"
+                    android:textColor="#C9A84C" android:fontFamily="@font/poppins_semibold"/>
+                <TextView android:id="@+id/tvEmailResult" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="-"
+                    android:textColor="#0A1628" android:textSize="15sp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:layout_marginBottom="16dp"/>
+
+                <View android:layout_width="match_parent" android:layout_height="0.5dp"
+                    android:background="#1A3A5C" android:alpha="0.2"
+                    android:layout_marginBottom="16dp"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="NOMOR HP" android:textSize="10sp" android:letterSpacing="0.1"
+                    android:textColor="#C9A84C" android:fontFamily="@font/poppins_semibold"/>
+                <TextView android:id="@+id/tvPhoneResult" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="-"
+                    android:textColor="#0A1628" android:textSize="15sp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:layout_marginBottom="16dp"/>
+
+                <View android:layout_width="match_parent" android:layout_height="0.5dp"
+                    android:background="#1A3A5C" android:alpha="0.2"
+                    android:layout_marginBottom="16dp"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="SEMINAR" android:textSize="10sp" android:letterSpacing="0.1"
+                    android:textColor="#C9A84C" android:fontFamily="@font/poppins_semibold"/>
+                <TextView android:id="@+id/tvSeminarResult" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="-"
+                    android:textColor="#0A1628" android:textSize="15sp"
+                    android:fontFamily="@font/poppins_bold"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        android:id="@+id/bottomNav"
+        layout="@layout/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>
